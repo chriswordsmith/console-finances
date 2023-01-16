@@ -89,19 +89,41 @@ var finances = [
 
 finances.length;
 
-console.log(finances.length);
+console.log(`Total months: ` + finances.length);
 
-var totalMonths = ("Total Months: " + finances.length);
 
-console.log(totalMonths);
-le.
-var average 
 
-let profitStatement = ("Greatest Increase in Profits: " + finances.[26, 0] + " " + finances[[26, 1] + [25, 1]]);
+let total = 0;
+let average = 0;
+let previous = 0;
+let totalChange = 0;
+let max = 0;
+let min = 0;
 
-console.log(profitStatement);
+for (let index = 0; index < finances.length; index++) {
+  profitLoss = finances[index][1];
+totalProfitLoss = total += profitLoss;
+change = (finances[index][1] -previous);
+max = Math.max(max, change);
+min = Math.min(min, change);
+totalChange = totalChange + (finances[index][1] - previous);
+previous = finances[index][1];
 
-console.log('Greatest Decrease in Profits: ' + finances.[46, 0] + ' ' + finances[[45, 1] + [46, 1]]);
+}
+console.log(`Total equals: ` + totalProfitLoss)
+
+console.log(`Average change: ` + Math.floor(totalProfitLoss/finances.length))
+
+console.log(`Greatest increase in profits: ` + max)
+console.log(`Greatest decrease in profits: ` + min)
+
+
+
+
+
+
+
+
 
 
 // The total number of months included in the dataset.
@@ -112,3 +134,16 @@ console.log('Greatest Decrease in Profits: ' + finances.[46, 0] + ' ' + finances
 
 // You will need to track what the total change in profits are from month to month and then find the average.
 // (Total/Number of months)
+
+
+
+
+// var totalMonths = ("Total Months: " + finances.length);
+// console.log(totalMonths);
+// le.
+// var average 
+// let profitStatement = ("Greatest Increase in Profits: " + finances.[26, 0] + " " + finances[[26, 1] + [25, 1]]);
+// console.log(profitStatement);
+// console.log('Greatest Decrease in Profits: ' + finances.[46, 0] + ' ' + finances[[45, 1] + [46, 1]]);
+
+
